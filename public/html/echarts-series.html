@@ -1,0 +1,65 @@
+<!--echarts柱状图案例-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.0/dist/echarts.js"></script>
+    <style>
+        #chart {
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+
+<div id="chart"></div>
+<script>
+  const chartDom = document.getElementById('chart')
+  const chart = echarts.init(chartDom, 'essos', { renderer: 'svg' })
+  chart.setOption({
+    title: {
+      text: 'Echarts多series案例'
+    },
+    xAxis: {
+      data: ['一季度', '二季度', '三季度', '四季度']
+    },
+    yAxis: {},
+    series: [
+      {
+        type: 'pie', //饼图
+        center: ['65%', 65],
+        radius: 35,
+        data: [
+          {
+            name: '分类1',
+            value: 50
+          },
+          {
+            name: '分类2',
+            value: 60
+          },
+          {
+            name: '分类3',
+            value: 57
+          },
+          {
+            name: '分类4',
+            value: 58
+          }
+        ]
+      },
+      {
+        type: 'line', //折线图
+        data: [100, 112, 96, 123]
+      },
+      {
+        type: 'bar', //柱状图
+        data: [10, 20, 90, 10]
+      }
+    ]
+  })
+</script>
+</body>
+</html>
