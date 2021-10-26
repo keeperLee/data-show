@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=5F3quYjYMFrRqmCQX2IWh7HyEFlL9sxG"></script>
+    <style>
+        html,body,#container{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .anchorBL, .BMap_cpyCtrl{
+            display:none
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        console.log(window.BMapGL);
+        var map = new BMapGL.Map('container');
+        var point = new BMapGL.Point(116.404, 39.915);
+        map.centerAndZoom(point ,10);
+        map.enableScrollWheelZoom(true);
+    </script>
+</body>
+</html>
