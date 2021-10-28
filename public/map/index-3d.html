@@ -22,10 +22,11 @@
         console.log(window.BMapGL);
         var map = new BMapGL.Map('container');
         var point = new BMapGL.Point(113.309776,23.233867);
-        map.centerAndZoom(point ,15);
+        map.centerAndZoom(point ,10);
         map.enableScrollWheelZoom(true);
         // map.setHeading(30);
         map.setTilt(70);
+        // map.setMapType(BMAP_EARTH_MAP);设置卫星地图模式
     </script>
 </body>
 </html>
